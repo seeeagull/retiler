@@ -29,13 +29,6 @@ public:
 
 
 
-	// seeeagull add:
-	struct {
-		math::Vec3d q, p1, p2, p3, qq, iqq, e1, e2, q1, q2, q3, pn, qn, trial;
-		double angle, check1, check2;
-		bool first = true;
-		int cnt = 0;
-	} mapPointInfo;
 private:
 	//
 	// The vertex structure is used to create the positions of the new vertices and move them into

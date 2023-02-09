@@ -385,12 +385,10 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 math::Vec3d RetileSurface::mapPointToPlane( const math::Vec3d &q, MeshEx::Triangle *t, MeshEx::Edge *hingeEdge )
 {
 	MeshEx::Edge *edge = hingeEdge;
-	bool isOnAdj = true;
 
 	// if no edge is defined
 	if( !edge )
 	{
-		isOnAdj = false;
 		// guesstimate the edge of the direction the point q lies in respect to the triangle t
 		// we do this by checking q with each plane defined by the edge-normals
 		double   distances[3];
@@ -423,62 +421,19 @@ math::Vec3d RetileSurface::mapPointToPlane( const math::Vec3d &q, MeshEx::Triang
 	// axis, the point will be rotated about
 	math::Vec3d axis = math::normalize(edge->v2->position - edge->v1->position);
 
-	// normal of the adjacent triangle
-	math::Vec3d adjNormal;
-
-	// if there is an adjacent triangle, we can get the normal from that
-	MeshEx::Triangle *adjTri = edge->getOtherTriangle( t );
-	if( adjTri && isOnAdj )
-		adjNormal = adjTri->normal;
-	else
-		// else we have to construct the normal
-		adjNormal = math::crossProduct( axis, math::normalize( q - edge->v1->position ) );
-
-	math::Vec3d pIn = math::crossProduct(axis, t->normal);
-	math::Vec3d qIn = math::crossProduct(axis, adjNormal);
-
-	double check1 = math::dotProduct( pIn , math::normalize( t->center - edge->v1->position) );
-	double check2 = math::dotProduct( qIn , math::normalize( q - edge->v1->position) );
-
-	// cos or -cos?
-	if( check1 < 0.0f )
-		pIn.negate();
-
-	if( check2 < 0.0f )
-		qIn.negate();
-
 	// rotation angle around edge
-	double angle = math::dotProduct( pIn, qIn ) ;
-	// seeeagull: decide by CGAL::Orientation()
-	double dihedralAngle = acosf( angle );
+	math::Vec3d tNormal = math::normalize( math::crossProduct( math::normalize( t->center - edge->v1->position ), axis ) );
+	math::Vec3d adjNormal = math::normalize( math::crossProduct( math::normalize( q - edge->v1->position ), axis ) );
+	double dihedralAngle = acosf( math::dotProduct( tNormal, adjNormal ) );
 
-	// clock or anti?
-	if( check1 < 0.0f )
-		dihedralAngle = -dihedralAngle;
+	double check = math::dotProduct( axis , math::normalize( math::crossProduct( tNormal, adjNormal ) ) );
 
-	if( check2 > 0.0f )
+	if( check > 0.0f )
 		dihedralAngle = -dihedralAngle;
 
 	math::Matrix44d trans = math::Matrix44d::TranslationMatrix( -edge->v1->position );
 	math::Matrix44d rot = math::Matrix44d::RotationMatrix( axis, dihedralAngle );
 	math::Matrix44d itrans = math::Matrix44d::TranslationMatrix( edge->v1->position );
-	mapPointInfo.angle = dihedralAngle, mapPointInfo.check1 = check1, mapPointInfo.check2 = check2;
-	mapPointInfo.q = q;
-	if (adjTri && isOnAdj)
-		mapPointInfo.q1 = adjTri->v[0]->position, mapPointInfo.q2 = adjTri->v[1]->position, mapPointInfo.q3 = adjTri->v[2]->position;
-	else
-		mapPointInfo.q1 = edge->v1->position, mapPointInfo.q2 = edge->v2->position, mapPointInfo.q3 = q;
-	mapPointInfo.p1 = t->v[0]->position, mapPointInfo.p2 = t->v[1]->position, mapPointInfo.p3 = t->v[2]->position;
-	mapPointInfo.e1 = edge->v1->position, mapPointInfo.e2 = edge->v2->position;
-	mapPointInfo.pn = t->normal;
-	mapPointInfo.qn = adjNormal;
-	mapPointInfo.trial = math::transform(t->normal, rot);
-	mapPointInfo.qq = math::transform( q, trans*rot*itrans );
-
-
-	math::Matrix44d irot = math::Matrix44d::RotationMatrix( axis, acosf( -angle ) );
-	mapPointInfo.trial = math::transform(t->normal, irot);
-	mapPointInfo.iqq = math::transform( q, trans*irot*itrans );
 
 	return math::transform( q, trans*rot*itrans );
 }
@@ -593,35 +548,7 @@ void RetileSurface::performIteration( double radius, double damp )
 			if( fabs(dis) > 0.0001f )
 			{
 				// shouldn't reach here
-				mapPointInfo.cnt++;
-				// seeeagull
-				// printf( "error neighbour points dont lie on the plane of t\n" );
-				if (mapPointInfo.first) {
-					printf("target  triangle:(%lf, %lf, %lf)->(%lf, %lf, %lf)->(%lf, %lf, %lf)\n",
-							mapPointInfo.p1[0], mapPointInfo.p1[1], mapPointInfo.p1[2],
-							mapPointInfo.p2[0], mapPointInfo.p2[1], mapPointInfo.p2[2],
-							mapPointInfo.p3[0], mapPointInfo.p3[1], mapPointInfo.p3[2]);
-					printf("project triangle:(%lf, %lf, %lf)->(%lf, %lf, %lf)->(%lf, %lf, %lf)\n",
-							mapPointInfo.q1[0], mapPointInfo.q1[1], mapPointInfo.q1[2],
-							mapPointInfo.q2[0], mapPointInfo.q2[1], mapPointInfo.q2[2],
-							mapPointInfo.q3[0], mapPointInfo.q3[1], mapPointInfo.q3[2]);
-					printf("around (%lf, %lf, %lf)->(%lf, %lf. %lf)\n",
-							mapPointInfo.e1[0], mapPointInfo.e1[1], mapPointInfo.e1[2],
-							mapPointInfo.e2[0], mapPointInfo.e2[1], mapPointInfo.e2[2]);
-					printf("origin point:(%lf, %lf, %lf) to result point:(%lf, %lf, %lf)\n",
-							mapPointInfo.q[0], mapPointInfo.q[1], mapPointInfo.q[2],
-							mapPointInfo.qq[0], mapPointInfo.qq[1], mapPointInfo.qq[2]);
-					printf("if-line point:(%lf, %lf, %lf)\n",
-							mapPointInfo.iqq[0], mapPointInfo.iqq[1], mapPointInfo.iqq[2]);
-					printf("p normal:(%lf, %lf, %lf) q normal:(%lf, %lf, %lf)\n",
-							mapPointInfo.pn[0], mapPointInfo.pn[1], mapPointInfo.pn[2],
-							mapPointInfo.qn[0], mapPointInfo.qn[1], mapPointInfo.qn[2]);
-					printf("trial normal:(%lf, %lf, %lf)\n",
-							mapPointInfo.trial[0], mapPointInfo.trial[1], mapPointInfo.trial[2]);
-					printf("check1: %lf, check2: %lf, angle: %lf\n",
-							mapPointInfo.check1, mapPointInfo.check2, mapPointInfo.angle);
-					mapPointInfo.first = false;
-				}
+				printf( "error neighbour points dont lie on the plane of t\n" );
 				p->tag = true;
 			}
 		}
@@ -679,7 +606,6 @@ void RetileSurface::retile( MeshEx *_mesh, size_t vertexCount, ConstrainedVertex
 	printf( "performing relaxation...\n" );
 	for( size_t i=0; i<m_iterationCount; ++i )
 		performIteration( m_radius, m_damp );
-	printf("-----------wrongs: %d\n", mapPointInfo.cnt);
 
 	// mutual tesselation --------------------------------------------------------
 	printf( "performing mutual tesselation...\n" );

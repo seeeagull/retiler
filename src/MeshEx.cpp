@@ -1338,8 +1338,7 @@ void MeshEx::Edge::registerTriangle( Triangle *t )
 			printf( "error - edge must not reference the same triangle twice\n" );
 	}else
 	{
-		// seeeagull:
-		// printf( "error - edge must not belong to more than 2 m_triangles\n" );
+		printf( "error - edge must not belong to more than 2 m_triangles\n" );
 		tag = true;
 		left->tag = true;
 
