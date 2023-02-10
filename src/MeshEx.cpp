@@ -21,6 +21,12 @@ typedef CGAL::Polygon_2<K, std::list<Point> > Polygon_2;
 
 size_t g_iterations = 0;
 
+
+Point get2d( math::Vec3d o, math::Vec3d e1,  math::Vec3d e2, math::Vec3d point )
+{
+	return Point( math::dotProduct( e1, point - o ), math::dotProduct( e2, point - o ) );
+}
+
 //
 // constructor which takes a mesh as input
 //
@@ -687,6 +693,10 @@ void MeshEx::reTriangulate( Triangle *t, const std::vector<math::Vec3d> &pointsW
 
 	// triangulate the area of the original triangle -----------------------------------------
 
+	math::Vec3d planePoint = v[0]->position;
+	math::Vec3d base1 = v[1]->position - v[0]->position;
+	math::Vec3d base2 = v[2]->position - v[0]->position;
+
 	// perform greedy triangluation
 	for( std::vector<helper>::iterator it=sqDistances.begin(); it != sqDistances.end(); ++it )
 	{
@@ -698,8 +708,16 @@ void MeshEx::reTriangulate( Triangle *t, const std::vector<math::Vec3d> &pointsW
 		{
 			Edge *e = (*eit);
 
-			// intersection?
-			if( !(e->contains(h->v1) || e->contains(h->v2)) && e->intersectsLine( h->v1->position, h->v2->position ) )
+			// do intersection test with cgal
+
+			Point h_v1 = get2d( planePoint, base1, base2, h->v1->position - planePoint );
+			Point h_v2 = get2d( planePoint, base1, base2, h->v2->position - planePoint );
+			Point e_v1 = get2d( planePoint, base1, base2, e->v1->position - planePoint );
+			Point e_v2 = get2d( planePoint, base1, base2, e->v2->position - planePoint );
+
+			CGAL::Segment_2<K> line_1( h_v1, h_v2 );
+			CGAL::Segment_2<K> line_2( e_v1, e_v2 );
+			if( !(e->contains(h->v1) || e->contains(h->v2)) && CGAL::do_intersect(line_1, line_2) )
 			{
 				intersection = true;
 				break;
@@ -726,6 +744,11 @@ void MeshEx::reTriangulate( Triangle *t, const std::vector<math::Vec3d> &pointsW
 
 	// create triangles from our edges
 	createTrianglesFromEdges( edges, normal );
+
+	// check whether the retriangulation is valid
+	if (pointsWithin.size() * 3 != edges.size() - 3)  {
+		printf("error : invalid retriangulation\n");
+	}
 
 
 	// done
@@ -1338,7 +1361,8 @@ void MeshEx::Edge::registerTriangle( Triangle *t )
 			printf( "error - edge must not reference the same triangle twice\n" );
 	}else
 	{
-		printf( "error - edge must not belong to more than 2 m_triangles\n" );
+		// tmp:seeeagull
+		// printf( "error - edge must not belong to more than 2 m_triangles\n" );
 		tag = true;
 		left->tag = true;
 

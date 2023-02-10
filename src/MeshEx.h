@@ -102,7 +102,7 @@ public:
 			Edge *e[3];
 		};
 
-		Triangle();                                                                                          // constructor
+		Triangle();                                                                                         // constructor
 		math::Vec3d  convertFromLocalToGlobalSpace( const math::Vec2d &localSpace, bool isVector = false ); // transforms the given coordinate in local 2d space into the global 3d space in which the triangle/element lies
 		math::Vec2d convertFromGlobalToLocalSpace( const math::Vec3d &globalSpace, bool isVector = false ); // inverse operation of the above
 		void                                                                           computeProperties(); // computes normal, area, etc...

@@ -164,6 +164,7 @@ void RetileSurface::generateVertices( size_t number )
 		case CGAL::ON_BOUNDARY:
 		case CGAL::ON_UNBOUNDED_SIDE:
 			// shouldn't reach here
+			printf("warning : generate a point outside of the triangle\n");
 			--i;
 			continue;
 		}
@@ -207,38 +208,6 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 		base2 = vertex->t->v_v;
 
 
-		if(0)
-		//if( count == 0 )
-		//if( vertex->index == 257  )
-		{
-
-			Point t_v1 = get2d_2( planePoint, base1, base2, vertex->t->v[0]->position );
-			Point t_v2 = get2d_2( planePoint, base1, base2, vertex->t->v[1]->position );
-			Point t_v3 = get2d_2( planePoint, base1, base2, vertex->t->v[2]->position );
-
-			Point vert = get2d_2( planePoint, base1, base2, vertex->position );
-
-			std::vector<Point> ps;
-
-			ps.push_back( t_v1 );
-			ps.push_back( t_v2 );
-			ps.push_back( t_v3 );
-
-
-			switch( CGAL::bounded_side_2( ps.begin(), ps.end(), vert, K()) )
-			{
-			case CGAL::ON_BOUNDED_SIDE :
-				//printf( "count %i: is inside the polygon.\n", count);
-			  break;
-			case CGAL::ON_BOUNDARY:
-			  //printf( "count %i: is on the polygon boundary. (%i)\n", count ,vertex->index);
-			  break;
-			case CGAL::ON_UNBOUNDED_SIDE:
-			  //printf( "count %i: is outside the polygon. (%i)\n", count ,vertex->index);
-			  break;
-			}
-		}
-
 		// intersect the vector from currentPosition to targetPosition with the edges
 		// to see whether the points moves out of the polygon
 		for( size_t j=0; j<3; ++j )
@@ -257,14 +226,7 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 				if( CGAL::orientation( e_v1, e_v2, vert ) == CGAL::COLLINEAR )
 				{
 					printf( "point lies on the line! (%li)  count: %i\n", vertex->index, count );
-					/*
-					pointOnLine = true;
-					edge = lastEdge = vertex->t->e[j];
-					intersection = vertex->position;
-					vertex->t->e[j]->tag = true;
-					
-					break;
-					*/
+
 					// this is a bit nasty, because the point lies on a vertex of the triangle, touching
 					// multiple edges
 
@@ -272,7 +234,7 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 					vertex->position = vertex->t->center;
 					//points.push_back( std::make_pair( vertex->position, math::Color::Yellow() ) );
 					return;
-				}else
+				} else
 				{
 					// do intersection test with cgal
 					CGAL::Segment_2<K> line_1( e_v1, e_v2 );
@@ -286,7 +248,7 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 							intersection = get3d_2( planePoint, base1, base2, tempIntersection );
 						}else
 						{
-							// segment!
+							// segment! (shouldn't reach here)
 							printf( "error : intersection during vertex movement is a line\n" );
 						}
 
@@ -328,28 +290,15 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 		// axis, the point will be rotated about
 		math::Vec3d axis = math::normalize(edge->v2->position - edge->v1->position);
 
-		double dp = math::dotProduct( vertex->t->normal, adjTri->normal );
-
-
-		if( dp < -1.0f )
-			dp = -1.0f;
-		if( dp > 1.0f )
-			dp = 1.0f;
-
 		// rotation angle around edge
-		double dihedralAngle = acosf( dp );
+		math::Vec3d tNormal = math::normalize( math::crossProduct( math::normalize( vertex->t->center - edge->v1->position ), axis ) );
+		math::Vec3d adjNormal = math::normalize( math::crossProduct( math::normalize( edge->v1->position - adjTri->center ), axis ) );
+		double dihedralAngle = acosf( math::dotProduct( tNormal, adjNormal ) );
 
-		double check = math::dotProduct( math::crossProduct(axis, vertex->t->normal) , math::normalize(vertex->position - edge->v1->position) );
-		double check2 = math::dotProduct( vertex->t->normal , math::normalize(adjTri->getOtherVertex(edge)->position - edge->v1->position) );
+		double check = math::dotProduct( axis , math::normalize( math::crossProduct( tNormal, adjNormal ) ) );
 
-
-		if( check < 0.0f )
+		if( check > 0.0f )
 			dihedralAngle = -dihedralAngle;
-
-		if( check2 > 0.0f )
-			dihedralAngle = -dihedralAngle;
-
-
 
 
 		math::Matrix44d trans = math::Matrix44d::TranslationMatrix( -edge->v1->position );
@@ -370,7 +319,7 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 
 		// we track the path of the vertex for debugging purposes
 		//vertex->path.push_back( vertex->position );
-	}while( ++count < 100 );
+	} while( ++count < 100 );
 
 	//vertex->position = targetPosition;
 }
@@ -548,7 +497,7 @@ void RetileSurface::performIteration( double radius, double damp )
 			if( fabs(dis) > 0.0001f )
 			{
 				// shouldn't reach here
-				printf( "error neighbour points dont lie on the plane of t\n" );
+				printf( "error : neighbour points dont lie on the plane of t\n" );
 				p->tag = true;
 			}
 		}
@@ -615,6 +564,7 @@ void RetileSurface::retile( MeshEx *_mesh, size_t vertexCount, ConstrainedVertex
 	// 2. remove old vertices
 	std::vector<MeshEx::Vertex *> retainedVertices; // vertices which could not be removed
 
+	// seeeagull: here!
 	printf( "retriangulating...\n" );
 	for( size_t i=0; i<oldVertices.size(); ++i )
 	{
