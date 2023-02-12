@@ -22,17 +22,17 @@ int main(int argc, char ** argv)
 	delete m;
 
 	// perform retiling
-	int numVertices = 400; // manually specify the number of vertices (== level of detail)
+	int numVertices = 600; // manually specify the number of vertices (== level of detail)
 	RetileSurface retiler;
 	RetileSurface::ConstrainedVertexSet cvs; // this is a list of vertices which are fixed in their position (and dont follow repulsion)
 	retiler.retile( mx, numVertices, cvs );
 
-	// // mx is now retiled and should have numVertices vertices etc.
-	// m = mx->getMesh();
-	// dk::io::exportToObjFile( m, "../simple_bunny.obj" );
+	// mx is now retiled and should have numVertices vertices etc.
+	m = mx->getMesh();
+	dk::io::exportToObjFile( m, "../simple_bunny.obj" );
 
-	// delete m;
-	// delete mx;
+	delete m;
+	delete mx;
 
 	return 0;
 }

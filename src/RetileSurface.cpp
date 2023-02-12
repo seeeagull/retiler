@@ -564,7 +564,6 @@ void RetileSurface::retile( MeshEx *_mesh, size_t vertexCount, ConstrainedVertex
 	// 2. remove old vertices
 	std::vector<MeshEx::Vertex *> retainedVertices; // vertices which could not be removed
 
-	// seeeagull: here!
 	printf( "retriangulating...\n" );
 	for( size_t i=0; i<oldVertices.size(); ++i )
 	{

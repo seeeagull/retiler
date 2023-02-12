@@ -275,7 +275,7 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 			boundaryRing[next].swap();
 
 		current = next;
-	}while( current != first );
+	} while( current != first );
 
 	// we have to collect all edges going out from the vertex-ring vertices which are connected to
 	// other vertices of the vertex ring - these will later be used for consistency check #2 (see chapter 4.4 of the paper)
@@ -319,10 +319,8 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 	math::Vec3d                           normal; // direction of the projection plane
 	math::Vec3d                            base1; // base vector which builds the 2d-coordinate system
 	math::Vec3d                            base2; // base vector which builds the 2d-coordinate system
-	double                               distance; // distance of the plane to the origin
+	double                              distance; // distance of the plane to the origin
 	CGAL::Orientation boundaryPolygonOrientation; // orientation (clockwise/counterclockwise of the boundary polyon)
-
-	distance = -math::dotProduct( v->position, normal );
 
 	size_t   trialCount = 13; // only one trial for now
 	size_t currentTrial = 0;
@@ -352,6 +350,8 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 		case 11:normal = math::normalize( math::Vec3d( .0f, 1.0f, .0f ));break;
 		case 12:normal = math::normalize( math::Vec3d( .0f, -.4472f, -.8944f ));break;
 		};
+
+		distance = -math::dotProduct( v->position, normal );
 
 		// compute the basis of the 2d-coordinate system of the plane defined by current normal
 		base1 = math::normalize( math::projectPointOnPlane( normal, distance, boundaryRing.begin()->first->position ) - v->position );
@@ -397,9 +397,8 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 				break;
 		}
 
-
 		if( success )
-		{
+		{	
 			//
 			// now we do the topology consistency check #2 (see chapter 4.4 of the paper)
 			// this is done by checking all critical edges whether they cross the interior of the
@@ -418,21 +417,39 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 
 				prev = 0;
 				current = criticalEdge->v1;
+				int tmp = 0;
 				do
 				{
 					leftPoly.push_back( current, boundaryRing[current].projected );
+
+					// check whether the critical edge cross over the half-polygon
+					if (success) {
+						if( !(criticalEdge->contains(current) || criticalEdge->contains(boundaryRing[current].next)) ) {
+							math::Vec2d e1_v1_projected = boundaryRing[current].projected;
+							math::Vec2d e1_v2_projected = boundaryRing[boundaryRing[current].next].projected;
+							math::Vec2d e2_v1_projected = boundaryRing[criticalEdge->v1].projected;
+							math::Vec2d e2_v2_projected = boundaryRing[criticalEdge->v2].projected;
+
+							CGAL::Segment_2<K> line_1( Point( e1_v1_projected.x, e1_v1_projected.y ), Point(e1_v2_projected.x, e1_v2_projected.y) );
+							CGAL::Segment_2<K> line_2( Point( e2_v1_projected.x, e2_v1_projected.y ), Point(e2_v2_projected.x, e2_v2_projected.y) );
+
+							if( CGAL::do_intersect( line_1, line_2 ) )
+							{
+								success = false;
+								break;
+							}
+						}
+					}
+
 					prev = current;
 					current = boundaryRing[current].next;
+					++tmp;
 
-				}while( current != criticalEdge->v2 );
+				} while( current != criticalEdge->v2 );
+				if (!success) {
+					break;
+				}
 				leftPoly.push_back( current, boundaryRing[current].projected );
-				// printf("left poly:\n");
-				// for (auto lit = leftPoly.vertexPoints.begin(); lit != leftPoly.vertexPoints.end(); ++lit) {
-				// 	printf("%lf %lf\n", (*lit)[0], (*lit)[1]);
-				// }
-				// if (leftPoly.orientation()) ;
-				// printf("left ok\n");
-				// printf("\n");
 
 
 				// setup right polygon
@@ -444,18 +461,33 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 				do
 				{
 					rightPoly.push_back( current, boundaryRing[current].projected );
+
+					// check whether the critical edge cross over the half-polygon
+					if (success) {
+						if( !(criticalEdge->contains(current) || criticalEdge->contains(boundaryRing[current].next)) ) {
+							math::Vec2d e1_v1_projected = boundaryRing[current].projected;
+							math::Vec2d e1_v2_projected = boundaryRing[boundaryRing[current].next].projected;
+							math::Vec2d e2_v1_projected = boundaryRing[criticalEdge->v1].projected;
+							math::Vec2d e2_v2_projected = boundaryRing[criticalEdge->v2].projected;
+
+							CGAL::Segment_2<K> line_1( Point( e1_v1_projected.x, e1_v1_projected.y ), Point(e1_v2_projected.x, e1_v2_projected.y) );
+							CGAL::Segment_2<K> line_2( Point( e2_v1_projected.x, e2_v1_projected.y ), Point(e2_v2_projected.x, e2_v2_projected.y) );
+
+							if( CGAL::do_intersect( line_1, line_2 ) )
+							{
+								success = false;
+								break;
+							}
+						}
+					}
 					prev = current;
 					current = boundaryRing[current].next;
 
-				}while( current != criticalEdge->v1 );
+				} while( current != criticalEdge->v1 );
+				if (!success) {
+					break;
+				}
 				rightPoly.push_back( current, boundaryRing[current].projected );
-				// printf("right poly:\n");
-				// for (auto lit = rightPoly.vertexPoints.begin(); lit != rightPoly.vertexPoints.end(); ++lit) {
-				// 	printf("%lf %lf\n", (*lit)[0], (*lit)[1]);
-				// }
-				// if (rightPoly.orientation()) ;
-				// printf("right ok\n");
-				// printf("\n");
 
 				// if orientations of both polygons are the same then the critical edge crosses the bounding polygon interior
 				if( leftPoly.orientation() == rightPoly.orientation() )
@@ -467,7 +499,7 @@ bool MeshEx::removeVertexAndReTriangulateNeighbourhood( Vertex *v )
 				}
 			}
 		}
-	}while( (++currentTrial < trialCount)&&(!success) );
+	} while( (++currentTrial < trialCount)&&(!success) );
 
 	
 	if( !success )
