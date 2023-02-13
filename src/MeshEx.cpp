@@ -958,40 +958,6 @@ MeshEx::Triangle::Triangle()
 }
 
 //
-// transforms the given coordinate in local 2d space into the global 3d space in which the triangle/element lies
-//
-//
-math::Vec3d MeshEx::Triangle::convertFromLocalToGlobalSpace( const math::Vec2d &localSpace, bool isVector )
-{
-	// if the result has to be returned relative to the element origin...
-	if( isVector )
-		// ...then we dont add the center
-		return localSpace.x*u + localSpace.y*v_v;
-	else
-		// the result has to be in absolute coordinates
-		return v0->position + localSpace.x*u + localSpace.y*v_v;
-}
-
-//
-// inverse operation of the above
-//
-// The argument isVector indicates whether the globalSpace argument is given relative to the element-center (isVector==true)
-// or is given in absolut coordinates
-//
-math::Vec2d MeshEx::Triangle::convertFromGlobalToLocalSpace( const math::Vec3d &globalSpace, bool isVector )
-{
-	// substract the center
-	math::Vec3d temp = globalSpace;
-
-	// if the given position is given in absolute world coordinates
-	if( !isVector )
-		temp -= v0->position;
-
-	// now project the vector onto u and v
-	return math::Vec2d( math::dotProduct( temp, u ), math::dotProduct( temp, v_v ) );
-}
-
-//
 // (re) computes normal
 //
 void MeshEx::Triangle::computeNormal()
@@ -1184,29 +1150,6 @@ void MeshEx::Vertex::unRegisterTriangle( Triangle *t )
 
 
 	printf( "Error Triangle was not member of the element ring of given node.\n" );
-}
-
-//
-// Returns 1 if the node lies on the left side of the given plane (nodeplanedistance < 0.0f)
-// or 2 otherwise.
-// Returns 0 if point lies on the plane.
-//
-int MeshEx::Vertex::getPlaneSide( const math::Vec3d &normal, const double &distance )
-{
-	 double planeDistance = math::distancePointPlane( position, normal, distance );
-
-	 // if the planeDistance is 0.0f then the point lies directly on the plane and can not be
-	 // used to decide on which side the element lies
-	 if( planeDistance == 0.0f )
-		 return 0;
-
-	 // signed plane distance
-	 if( planeDistance < 0.0f )
-		 // point lies on the left side
-		 return 1;
-	 else
-		 // point lies on the right side
-		 return 2;
 }
 
 //

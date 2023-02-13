@@ -42,7 +42,6 @@ public:
 		void                                               registerTriangle( Triangle *t );  // adds the given element to the elementring list
 		void                                             unRegisterTriangle( Triangle *t );  // remvoes the given element to the elementring list
 		bool                                                                  isDesolate();  // returns true if no element references this node
-		int               getPlaneSide( const math::Vec3d &normal, const double &distance );  // returns 1 if the node lies on the left side of the given plane (nodeplanedistance < 0.0f) or 2 otherwise - returns 0 if point lies on the plane
 		void                                                               computeNormal();  // computes normal from the surrounding tris - works only if the surrounding tris have a valid normal
 
 		math::Vec3d                                                               position;
@@ -100,8 +99,6 @@ public:
 		};
 
 		Triangle();                                                                                         // constructor
-		math::Vec3d  convertFromLocalToGlobalSpace( const math::Vec2d &localSpace, bool isVector = false ); // transforms the given coordinate in local 2d space into the global 3d space in which the triangle/element lies
-		math::Vec2d convertFromGlobalToLocalSpace( const math::Vec3d &globalSpace, bool isVector = false ); // inverse operation of the above
 		void                                                                           computeProperties(); // computes normal, area, etc...
 		Vertex                                         *getOtherVertex( Vertex *vertex1, Vertex *vertex2 ); // returns the third node which neither equals n1 nor n2
 		Vertex                                                               *getOtherVertex( Edge *edge ); // returns the third node which neither equals n1 nor n2
@@ -144,7 +141,6 @@ public:
 	Vertex *                               splitEdge( Edge *edge, const math::Vec3d &splitPosition ); ///< splits the given edge into 2 and returns the splitnode which was created to seperate the edge
 	void                                                                    removeEdge( Edge *edge ); ///< removes edge from the list of edges
 	void    removeTriangle( Triangle *element, bool removeVertices = true, bool removeEdges = true ); ///< removes element from the list of elements
-	void     replaceVertexWithinTriangle( Triangle *e, Vertex *originalVertex, Vertex *replacement ); ///< replaces all occurances of the original node within element with the replacementnode and changes the edges accordingly
 	void                  reTriangulate( Triangle *t, const std::vector<math::Vec3d> &pointsWithin ); ///< retriangulates the given triangle taking the given points into acount (which have to be coplanar with the triangle)
 	bool                                      removeVertexAndReTriangulateNeighbourhood( Vertex *v ); ///< removes the given vertex and retriangulate the hole which would be made
 	void           createTrianglesFromEdges( std::vector<Edge *> &edges, const math::Vec3d &normal ); ///< this method takes a list of already created edges and creates triangles for filling triangulated areas
@@ -162,146 +158,3 @@ public:
 	bool     stop;
 	math::Vec3d temp;
 };
-
-
-
-	///
-	/// \brief holds a connection between 2 vertices (used by retiling algo)
-	///
-	struct helper
-	{
-		helper( MeshEx::Vertex *_v1, MeshEx::Vertex *_v2 ) : v1(_v1), v2(_v2)
-		{
-			sqDistance = (v2->position - v1->position).getSquaredLength();
-		}
-		double   sqDistance;
-		MeshEx::Vertex *v1;
-		MeshEx::Vertex *v2;
-
-		bool operator<( const helper &rhs )
-		{
-			return sqDistance < rhs.sqDistance;
-		}
-	};
-
-	///
-	/// \brief This structure is another helper which is used to store the incoming and outgoing
-	/// edge of an vertex of the vertex ring.
-	///
-	struct VertexRingEdges
-	{
-		VertexRingEdges() : m_e1(0), m_e2(0), triangleCount(0)
-		{
-		}
-
-
-
-		/// \brief add edge
-		/// Every ring-vertex has an incomming and outgoing edge. The VertexRingEdges structure is only
-		/// interested in the vectors going out into the direction of the edges...
-		///
-		/// Registering the vectors isnt enough - to work properly, the normal of the plane has to be
-		/// passed using setNormal
-		///
-		void registerEdgeVector( MeshEx::Edge *e, const math::Vec3d &vec )
-		{
-			if( !m_e1 )
-			{
-				m_vec1 = vec;
-				m_e1 = e;
-			}else
-			if( !m_e2 )
-			{
-				m_vec2 = vec;
-				m_e2 = e;
-			}else
-				printf( "error : There must NOT be more then 2 edges from the edgering\n" );
-		}
-
-		///
-		/// Computes the clockwise angle between the given vector and the vector going out of m_v
-		/// into the direction of m_e1
-		///
-		double computeClockwiseAngle( const math::Vec3d vec )
-		{
-			math::Vec3d cp = math::crossProduct( m_vec1, vec );
-			double dp = math::dotProduct( m_vec1, vec );
-
-			// if the crossproduct is zero, then m_vec1 and vec are colinear
-			// which means the angle between those 2 vectors is either 0.0f or 180.0f
-			// we can use the projection of the crossproduct onto the normal to decide
-			// since the crossproduct is zero
-			// but we know the 2 vecs are colinear, so we take the dotproduct between those 2
-			// vectors to see whether they point in the same direction or not
-			/*
-			if( cp.getSquaredLength() < 0.000001f )
-				if( dp < 0.0f )
-					return MATH_PIf;
-				else
-					return 0.0f;
-			*/
-
-			// clamp the dotproduct to [-1,1] -> acos will be not happy otherwise
-			if( dp < -1.0f )
-				dp = -1.0f;
-			if( dp > 1.0f )
-				dp = 1.0f;
-
-			double angle = acosf( dp );
-
-
-			// if the crossproduct of the 2 vectors points in the same direction as the cross product
-			if( math::dotProduct( m_normal, cp ) > 0.0f )
-				// then the clockwise angle between these 2 vectors is just the dotproduct
-				return angle;
-			else
-			{
-				// if the crossproduct points in the opposite direction, then the angle
-				// is 360� - angle
-				//return math::degToRad( 360.0f ) - angle;
-				//double t = math::degToRad( 360.0f ) - angle;
-				double t = 6.283185307179586f - angle;
-				//if( t >= 6.283185307179586f )
-				//	t -= 6.283185307179586f;
-				return t;
-			}
-
-			// we shouldnt come here
-			return angle;
-		}
-
-		void setNormal( const math::Vec3d &normal )
-		{
-			m_normal = normal;
-
-			// compute clockwise angle between the 2 edges
-			m_cwAngle = computeClockwiseAngle( m_vec2 );
-		}
-
-		double getAngle()
-		{
-			return m_cwAngle;
-		}
-
-		void flipEdges()
-		{
-			std::swap( m_e1, m_e2 );
-			std::swap( m_vec1, m_vec2 );
-			// recompute clockwise angle between the 2 edge-vectors
-			m_cwAngle = computeClockwiseAngle( m_vec2 );
-		}
-
-		math::Vec3d             m_normal;
-		MeshEx::Edge               *m_e1;
-		MeshEx::Edge               *m_e2;
-		math::Vec3d               m_vec1;
-		math::Vec3d               m_vec2;
-
-		double                  m_cwAngle;
-
-		size_t             triangleCount; // temp for debugging
-	};
-	
-	
-	
-	

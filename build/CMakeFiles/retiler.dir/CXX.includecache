@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/seeeagull/retiler/src/Mesh.cpp
-Mesh.h
-/home/seeeagull/retiler/src/Mesh.h
-map
--
-algorithm
--
-
 /home/seeeagull/retiler/src/Mesh.h
 vector
 -
@@ -64,12 +56,6 @@ Mesh.h
 MeshEx.h
 /home/seeeagull/retiler/src/MeshEx.h
 list
--
-
-/home/seeeagull/retiler/src/ObjIO.cpp
-ObjIO.h
-/home/seeeagull/retiler/src/ObjIO.h
-iostream
 -
 
 /home/seeeagull/retiler/src/ObjIO.h
@@ -132,17 +118,7 @@ MeshEx.h
 RetileSurface.h
 /home/seeeagull/retiler/src/RetileSurface.h
 
-/home/seeeagull/retiler/src/math/Color.cpp
-Color.h
 /home/seeeagull/retiler/src/math/Color.h
-Math.h
-/home/seeeagull/retiler/src/math/Math.h
-
-/home/seeeagull/retiler/src/math/Color.h
-
-/home/seeeagull/retiler/src/math/Math.cpp
-Math.h
-/home/seeeagull/retiler/src/math/Math.h
 
 /home/seeeagull/retiler/src/math/Math.h
 math.h
