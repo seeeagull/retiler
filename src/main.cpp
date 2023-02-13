@@ -22,7 +22,7 @@ int main(int argc, char ** argv)
 	delete m;
 
 	// perform retiling
-	int numVertices = 600; // manually specify the number of vertices (== level of detail)
+	int numVertices = 800; // manually specify the number of vertices (== level of detail)
 	RetileSurface retiler;
 	RetileSurface::ConstrainedVertexSet cvs; // this is a list of vertices which are fixed in their position (and dont follow repulsion)
 	retiler.retile( mx, numVertices, cvs );

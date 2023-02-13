@@ -4,7 +4,6 @@
 CMakeFiles/retiler.dir/src/Mesh.cpp.o
  /home/seeeagull/retiler/src/Mesh.cpp
  /home/seeeagull/retiler/src/Mesh.h
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -17,18 +16,14 @@ CMakeFiles/retiler.dir/src/Mesh.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o
  /home/seeeagull/retiler/src/Mesh.h
  /home/seeeagull/retiler/src/MeshEx.cpp
  /home/seeeagull/retiler/src/MeshEx.h
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -41,18 +36,14 @@ CMakeFiles/retiler.dir/src/MeshEx.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o
  /home/seeeagull/retiler/src/Mesh.h
  /home/seeeagull/retiler/src/MeshEx.h
  /home/seeeagull/retiler/src/MeshEx_intersections.cpp
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -65,18 +56,14 @@ CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o
  /home/seeeagull/retiler/src/Mesh.h
  /home/seeeagull/retiler/src/MeshEx.h
  /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -89,19 +76,15 @@ CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o
  /home/seeeagull/retiler/src/Mesh.h
  /home/seeeagull/retiler/src/ObjIO.cpp
  /home/seeeagull/retiler/src/ObjIO.h
  /home/seeeagull/retiler/src/StringManip.h
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -114,19 +97,15 @@ CMakeFiles/retiler.dir/src/ObjIO.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o
  /home/seeeagull/retiler/src/Mesh.h
  /home/seeeagull/retiler/src/MeshEx.h
  /home/seeeagull/retiler/src/RetileSurface.cpp
  /home/seeeagull/retiler/src/RetileSurface.h
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -139,13 +118,10 @@ CMakeFiles/retiler.dir/src/RetileSurface.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/StringManip.cpp.o
  /home/seeeagull/retiler/src/StringManip.cpp
  /home/seeeagull/retiler/src/StringManip.h
@@ -156,7 +132,6 @@ CMakeFiles/retiler.dir/src/main.cpp.o
  /home/seeeagull/retiler/src/RetileSurface.h
  /home/seeeagull/retiler/src/StringManip.h
  /home/seeeagull/retiler/src/main.cpp
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.h
@@ -169,15 +144,11 @@ CMakeFiles/retiler.dir/src/main.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.cpp
  /home/seeeagull/retiler/src/math/Color.h
@@ -191,15 +162,11 @@ CMakeFiles/retiler.dir/src/math/Color.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o
- /home/seeeagull/retiler/src/math/BoundingBox2.h
  /home/seeeagull/retiler/src/math/BoundingBox3.h
  /home/seeeagull/retiler/src/math/Color.h
  /home/seeeagull/retiler/src/math/Math.cpp
@@ -213,13 +180,10 @@ CMakeFiles/retiler.dir/src/math/Math.cpp.o
  /home/seeeagull/retiler/src/math/Noise.h
  /home/seeeagull/retiler/src/math/PerlinNoise.h
  /home/seeeagull/retiler/src/math/RNG.h
- /home/seeeagull/retiler/src/math/Ray3.h
  /home/seeeagull/retiler/src/math/Vec2.h
  /home/seeeagull/retiler/src/math/Vec2Algo.h
  /home/seeeagull/retiler/src/math/Vec3.h
  /home/seeeagull/retiler/src/math/Vec3Algo.h
- /home/seeeagull/retiler/src/math/Vec4.h
- /home/seeeagull/retiler/src/math/Vec4Algo.h
 CMakeFiles/retiler.dir/src/math/Noise.cpp.o
  /home/seeeagull/retiler/src/math/Noise.cpp
  /home/seeeagull/retiler/src/math/Noise.h

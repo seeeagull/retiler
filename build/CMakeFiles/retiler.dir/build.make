@@ -60,158 +60,158 @@ include CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/Mesh.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/retiler.dir/src/Mesh.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/Mesh.cpp.o -c /home/seeeagull/retiler/src/Mesh.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/Mesh.cpp.o -c /home/seeeagull/retiler/src/Mesh.cpp
 
 CMakeFiles/retiler.dir/src/Mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/Mesh.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/Mesh.cpp > CMakeFiles/retiler.dir/src/Mesh.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/Mesh.cpp > CMakeFiles/retiler.dir/src/Mesh.cpp.i
 
 CMakeFiles/retiler.dir/src/Mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/Mesh.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/Mesh.cpp -o CMakeFiles/retiler.dir/src/Mesh.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/Mesh.cpp -o CMakeFiles/retiler.dir/src/Mesh.cpp.s
 
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/MeshEx.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/retiler.dir/src/MeshEx.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx.cpp.o -c /home/seeeagull/retiler/src/MeshEx.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx.cpp.o -c /home/seeeagull/retiler/src/MeshEx.cpp
 
 CMakeFiles/retiler.dir/src/MeshEx.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/MeshEx.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx.cpp > CMakeFiles/retiler.dir/src/MeshEx.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx.cpp > CMakeFiles/retiler.dir/src/MeshEx.cpp.i
 
 CMakeFiles/retiler.dir/src/MeshEx.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/MeshEx.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx.cpp -o CMakeFiles/retiler.dir/src/MeshEx.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx.cpp -o CMakeFiles/retiler.dir/src/MeshEx.cpp.s
 
 CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/MeshEx_intersections.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o -c /home/seeeagull/retiler/src/MeshEx_intersections.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o -c /home/seeeagull/retiler/src/MeshEx_intersections.cpp
 
 CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx_intersections.cpp > CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx_intersections.cpp > CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.i
 
 CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx_intersections.cpp -o CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx_intersections.cpp -o CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.s
 
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/MeshEx_retriangulate.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o -c /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o -c /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp
 
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp > CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp > CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.i
 
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp -o CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp -o CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.s
 
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/ObjIO.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/retiler.dir/src/ObjIO.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/ObjIO.cpp.o -c /home/seeeagull/retiler/src/ObjIO.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/ObjIO.cpp.o -c /home/seeeagull/retiler/src/ObjIO.cpp
 
 CMakeFiles/retiler.dir/src/ObjIO.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/ObjIO.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/ObjIO.cpp > CMakeFiles/retiler.dir/src/ObjIO.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/ObjIO.cpp > CMakeFiles/retiler.dir/src/ObjIO.cpp.i
 
 CMakeFiles/retiler.dir/src/ObjIO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/ObjIO.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/ObjIO.cpp -o CMakeFiles/retiler.dir/src/ObjIO.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/ObjIO.cpp -o CMakeFiles/retiler.dir/src/ObjIO.cpp.s
 
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/RetileSurface.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/retiler.dir/src/RetileSurface.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/RetileSurface.cpp.o -c /home/seeeagull/retiler/src/RetileSurface.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/RetileSurface.cpp.o -c /home/seeeagull/retiler/src/RetileSurface.cpp
 
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/RetileSurface.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/RetileSurface.cpp > CMakeFiles/retiler.dir/src/RetileSurface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/RetileSurface.cpp > CMakeFiles/retiler.dir/src/RetileSurface.cpp.i
 
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/RetileSurface.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/RetileSurface.cpp -o CMakeFiles/retiler.dir/src/RetileSurface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/RetileSurface.cpp -o CMakeFiles/retiler.dir/src/RetileSurface.cpp.s
 
 CMakeFiles/retiler.dir/src/StringManip.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/StringManip.cpp.o: ../src/StringManip.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/retiler.dir/src/StringManip.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/StringManip.cpp.o -c /home/seeeagull/retiler/src/StringManip.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/StringManip.cpp.o -c /home/seeeagull/retiler/src/StringManip.cpp
 
 CMakeFiles/retiler.dir/src/StringManip.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/StringManip.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/StringManip.cpp > CMakeFiles/retiler.dir/src/StringManip.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/StringManip.cpp > CMakeFiles/retiler.dir/src/StringManip.cpp.i
 
 CMakeFiles/retiler.dir/src/StringManip.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/StringManip.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/StringManip.cpp -o CMakeFiles/retiler.dir/src/StringManip.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/StringManip.cpp -o CMakeFiles/retiler.dir/src/StringManip.cpp.s
 
 CMakeFiles/retiler.dir/src/main.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/retiler.dir/src/main.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/main.cpp.o -c /home/seeeagull/retiler/src/main.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/main.cpp.o -c /home/seeeagull/retiler/src/main.cpp
 
 CMakeFiles/retiler.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/main.cpp > CMakeFiles/retiler.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/main.cpp > CMakeFiles/retiler.dir/src/main.cpp.i
 
 CMakeFiles/retiler.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/main.cpp -o CMakeFiles/retiler.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/main.cpp -o CMakeFiles/retiler.dir/src/main.cpp.s
 
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Color.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/retiler.dir/src/math/Color.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Color.cpp.o -c /home/seeeagull/retiler/src/math/Color.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Color.cpp.o -c /home/seeeagull/retiler/src/math/Color.cpp
 
 CMakeFiles/retiler.dir/src/math/Color.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/math/Color.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Color.cpp > CMakeFiles/retiler.dir/src/math/Color.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Color.cpp > CMakeFiles/retiler.dir/src/math/Color.cpp.i
 
 CMakeFiles/retiler.dir/src/math/Color.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/math/Color.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Color.cpp -o CMakeFiles/retiler.dir/src/math/Color.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Color.cpp -o CMakeFiles/retiler.dir/src/math/Color.cpp.s
 
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Math.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/retiler.dir/src/math/Math.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Math.cpp.o -c /home/seeeagull/retiler/src/math/Math.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Math.cpp.o -c /home/seeeagull/retiler/src/math/Math.cpp
 
 CMakeFiles/retiler.dir/src/math/Math.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/math/Math.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Math.cpp > CMakeFiles/retiler.dir/src/math/Math.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Math.cpp > CMakeFiles/retiler.dir/src/math/Math.cpp.i
 
 CMakeFiles/retiler.dir/src/math/Math.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/math/Math.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Math.cpp -o CMakeFiles/retiler.dir/src/math/Math.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Math.cpp -o CMakeFiles/retiler.dir/src/math/Math.cpp.s
 
 CMakeFiles/retiler.dir/src/math/Noise.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/math/Noise.cpp.o: ../src/math/Noise.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/retiler.dir/src/math/Noise.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Noise.cpp.o -c /home/seeeagull/retiler/src/math/Noise.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/Noise.cpp.o -c /home/seeeagull/retiler/src/math/Noise.cpp
 
 CMakeFiles/retiler.dir/src/math/Noise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/math/Noise.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Noise.cpp > CMakeFiles/retiler.dir/src/math/Noise.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/Noise.cpp > CMakeFiles/retiler.dir/src/math/Noise.cpp.i
 
 CMakeFiles/retiler.dir/src/math/Noise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/math/Noise.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Noise.cpp -o CMakeFiles/retiler.dir/src/math/Noise.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/Noise.cpp -o CMakeFiles/retiler.dir/src/math/Noise.cpp.s
 
 CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.o: CMakeFiles/retiler.dir/flags.make
 CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.o: ../src/math/PerlinNoise.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/seeeagull/retiler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.o"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.o -c /home/seeeagull/retiler/src/math/PerlinNoise.cpp
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.o -c /home/seeeagull/retiler/src/math/PerlinNoise.cpp
 
 CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/PerlinNoise.cpp > CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/seeeagull/retiler/src/math/PerlinNoise.cpp > CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.i
 
 CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/PerlinNoise.cpp -o CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/seeeagull/retiler/src/math/PerlinNoise.cpp -o CMakeFiles/retiler.dir/src/math/PerlinNoise.cpp.s
 
 # Object files for target retiler
 retiler_OBJECTS = \

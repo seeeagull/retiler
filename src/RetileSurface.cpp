@@ -232,7 +232,6 @@ void RetileSurface::moveVertexOnMesh( Vertex *vertex, const math::Vec3d &directi
 
 					// currently we handle this by replacing the vertex to the center of the triangle
 					vertex->position = vertex->t->center;
-					//points.push_back( std::make_pair( vertex->position, math::Color::Yellow() ) );
 					return;
 				} else
 				{

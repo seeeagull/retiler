@@ -61,9 +61,6 @@ public:
 
 		void                                                                       registerTriangle( Triangle *t );  // assigns the given element to the left or right wing of the edge (dependand on which wing is 0)
 		void                                                                     unregisterTriangle( Triangle *t );  // sets either the left or right reference to zero when it references the given element
-		bool   intersectsPlane( const math::Vec3d &normal, const double &distance, math::Vec3d &intersectionPoint );  // convinience function to compute the intersection of the edge with a given plane
-		bool        intersectsLine( const math::Vec3d &p1, const math::Vec3d &p2, math::Vec3d &intersectionPoint );  // convinience function to compute the intersection of the edge with a given line
-		bool                                        intersectsLine( const math::Vec3d &p1, const math::Vec3d &p2 );  // convinience function to compute the intersection of the edge with a given line without giving back the intersection point
 		Vertex                                                                        *getOtherVertex( Vertex *v );  // convinience function to get the other node of the two nodes which are referenced by the edge
 		Triangle                                                                  *getOtherTriangle( Triangle *t );  // returns the opposite triangle
 		bool                                                                                          isDesolate();  // returns true if no elements references this edge

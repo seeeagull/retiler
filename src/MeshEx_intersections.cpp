@@ -13,35 +13,6 @@
 
 
 
-/*
-#include <CGAL/Constrained_Delaunay_triangulation_2.h>
-typedef CGAL::Triangulation_vertex_base_2<K>                                                               Vb;
-typedef CGAL::Constrained_triangulation_face_base_2<K, CGAL::Triangulation_face_base_with_info_2<int, K> > Fb;
-typedef CGAL::Triangulation_data_structure_2<Vb,Fb>                                                       TDS;
-typedef CGAL::Exact_predicates_tag                                                                       Itag;
-typedef CGAL::Constrained_Delaunay_triangulation_2<K, TDS, Itag>                                Triangulation;
-typedef CGAL::Constrained_Delaunay_triangulation_2<K, TDS, Itag>::Face_iterator                 Face_iterator;
-typedef CGAL::Constrained_Delaunay_triangulation_2<K, TDS, Itag>::Face_handle                     Face_handle;
-typedef CGAL::Constrained_Delaunay_triangulation_2<K, TDS, Itag>::Vertex_handle                 Vertex_handle;
-typedef CGAL::Constrained_Delaunay_triangulation_2<K, TDS, Itag>::Point                                 Point;
-typedef CGAL::Polygon_2<K, std::vector<Point> >                                                     Polygon_2;
-*/
-
-/*
-math::Vec2d _get2d( math::Vec3d e1,  math::Vec3d e2, math::Vec3d point )
-{
-	return math::Vec2d( math::dotProduct( e1, point ), math::dotProduct( e2, point ) );
-}
-*/
-
-
-
-
-
-
-
-
-
 //
 //
 //

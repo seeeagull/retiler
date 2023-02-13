@@ -1317,32 +1317,6 @@ bool MeshEx::Edge::isBoundaryEdge()
 	return true;
 }
 
-//
-// convinience function to compute the intersection of the edge with a given plane
-//
-bool MeshEx::Edge::intersectsPlane( const math::Vec3d &normal, const double &distance, math::Vec3d &intersectionPoint )
-{
-	return math::intersectionRayPlane( math::Ray3d( v1->position, v2->position ), normal, distance, intersectionPoint );
-}
-
-//
-// convinience function to compute the intersection of the edge with a given line
-//
-bool MeshEx::Edge::intersectsLine( const math::Vec3d &p1, const math::Vec3d &p2, math::Vec3d &intersectionPoint  )
-{
-	return math::intersectionRayRay( math::Ray3d( v1->position, v2->position ), math::Ray3d( p1, p2 ), intersectionPoint );	
-}
-
-
-//
-// convinience function to compute the intersection
-// of the edge with a given line without giving back the intersection point
-//
-bool MeshEx::Edge::intersectsLine( const math::Vec3d &p1, const math::Vec3d &p2 )
-{
-	math::Vec3d intersection;
-	return math::intersectionRayRay( math::Ray3d( v1->position, v2->position ), math::Ray3d( p1, p2 ), intersection );	
-}
 
 //
 // assigns the given element to the left or right wing of the edge (dependand on which wing is 0)

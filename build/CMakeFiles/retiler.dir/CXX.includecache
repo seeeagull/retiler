@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/seeeagull/retiler/src/Mesh.cpp
+Mesh.h
+/home/seeeagull/retiler/src/Mesh.h
+map
+-
+algorithm
+-
+
 /home/seeeagull/retiler/src/Mesh.h
 vector
 -
@@ -15,6 +23,20 @@ list
 -
 math/Math.h
 /home/seeeagull/retiler/src/math/Math.h
+
+/home/seeeagull/retiler/src/MeshEx.cpp
+MeshEx.h
+/home/seeeagull/retiler/src/MeshEx.h
+algorithm
+-
+list
+-
+CGAL/Simple_cartesian.h
+-
+CGAL/Filtered_kernel.h
+-
+CGAL/Polygon_2.h
+-
 
 /home/seeeagull/retiler/src/MeshEx.h
 map
@@ -38,6 +60,24 @@ CGAL/Constrained_Delaunay_triangulation_2.h
 Mesh.h
 /home/seeeagull/retiler/src/Mesh.h
 
+/home/seeeagull/retiler/src/MeshEx_intersections.cpp
+MeshEx.h
+/home/seeeagull/retiler/src/MeshEx.h
+list
+-
+
+/home/seeeagull/retiler/src/MeshEx_retriangulate.cpp
+MeshEx.h
+/home/seeeagull/retiler/src/MeshEx.h
+list
+-
+
+/home/seeeagull/retiler/src/ObjIO.cpp
+ObjIO.h
+/home/seeeagull/retiler/src/ObjIO.h
+iostream
+-
+
 /home/seeeagull/retiler/src/ObjIO.h
 iostream
 -
@@ -54,11 +94,35 @@ StringManip.h
 Mesh.h
 /home/seeeagull/retiler/src/Mesh.h
 
+/home/seeeagull/retiler/src/RetileSurface.cpp
+RetileSurface.h
+/home/seeeagull/retiler/src/RetileSurface.h
+iostream
+-
+fstream
+-
+CGAL/Simple_cartesian.h
+-
+CGAL/Filtered_kernel.h
+-
+CGAL/Polygon_2.h
+-
+CGAL/Triangulation_2.h
+-
+CGAL/Triangulation_face_base_with_info_2.h
+-
+CGAL/Constrained_Delaunay_triangulation_2.h
+-
+
 /home/seeeagull/retiler/src/RetileSurface.h
 MeshEx.h
 /home/seeeagull/retiler/src/MeshEx.h
 stdarg.h
 -
+
+/home/seeeagull/retiler/src/StringManip.cpp
+StringManip.h
+/home/seeeagull/retiler/src/StringManip.h
 
 /home/seeeagull/retiler/src/StringManip.h
 string
@@ -78,17 +142,23 @@ MeshEx.h
 RetileSurface.h
 /home/seeeagull/retiler/src/RetileSurface.h
 
-/home/seeeagull/retiler/src/math/BoundingBox2.h
-Math.h
-/home/seeeagull/retiler/src/math/Math.h
-
 /home/seeeagull/retiler/src/math/BoundingBox3.h
 Vec3.h
 /home/seeeagull/retiler/src/math/Vec3.h
 limits
 -
 
+/home/seeeagull/retiler/src/math/Color.cpp
+Color.h
 /home/seeeagull/retiler/src/math/Color.h
+Math.h
+/home/seeeagull/retiler/src/math/Math.h
+
+/home/seeeagull/retiler/src/math/Color.h
+
+/home/seeeagull/retiler/src/math/Math.cpp
+Math.h
+/home/seeeagull/retiler/src/math/Math.h
 
 /home/seeeagull/retiler/src/math/Math.h
 math.h
@@ -101,12 +171,6 @@ Vec3.h
 /home/seeeagull/retiler/src/math/Vec3.h
 Vec3Algo.h
 /home/seeeagull/retiler/src/math/Vec3Algo.h
-Vec4.h
-/home/seeeagull/retiler/src/math/Vec4.h
-Vec4Algo.h
-/home/seeeagull/retiler/src/math/Vec4Algo.h
-Ray3.h
-/home/seeeagull/retiler/src/math/Ray3.h
 Matrix22.h
 /home/seeeagull/retiler/src/math/Matrix22.h
 Matrix22Algo.h
@@ -123,8 +187,6 @@ Color.h
 /home/seeeagull/retiler/src/math/Color.h
 BoundingBox3.h
 /home/seeeagull/retiler/src/math/BoundingBox3.h
-BoundingBox2.h
-/home/seeeagull/retiler/src/math/BoundingBox2.h
 RNG.h
 /home/seeeagull/retiler/src/math/RNG.h
 Noise.h
@@ -160,27 +222,23 @@ Vec3Algo.h
 cassert
 -
 
+/home/seeeagull/retiler/src/math/Noise.cpp
+Noise.h
 /home/seeeagull/retiler/src/math/Noise.h
+
+/home/seeeagull/retiler/src/math/Noise.h
+
+/home/seeeagull/retiler/src/math/PerlinNoise.cpp
+PerlinNoise.h
+/home/seeeagull/retiler/src/math/PerlinNoise.h
+stdlib.h
+-
+math.h
+-
 
 /home/seeeagull/retiler/src/math/PerlinNoise.h
 
 /home/seeeagull/retiler/src/math/RNG.h
-
-/home/seeeagull/retiler/src/math/Ray3.h
-Vec3.h
-/home/seeeagull/retiler/src/math/Vec3.h
-Vec3Algo.h
-/home/seeeagull/retiler/src/math/Vec3Algo.h
-Matrix33.h
-/home/seeeagull/retiler/src/math/Matrix33.h
-BoundingBox3.h
-/home/seeeagull/retiler/src/math/BoundingBox3.h
-limits
--
-algorithm
--
-cassert
--
 
 /home/seeeagull/retiler/src/math/Vec2.h
 
@@ -199,12 +257,4 @@ math.h
 -
 Vec3.h
 /home/seeeagull/retiler/src/math/Vec3.h
-
-/home/seeeagull/retiler/src/math/Vec4.h
-
-/home/seeeagull/retiler/src/math/Vec4Algo.h
-math.h
--
-Vec4.h
-/home/seeeagull/retiler/src/math/Vec4.h
 
