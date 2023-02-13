@@ -60,12 +60,6 @@ CGAL/Constrained_Delaunay_triangulation_2.h
 Mesh.h
 /home/seeeagull/retiler/src/Mesh.h
 
-/home/seeeagull/retiler/src/MeshEx_intersections.cpp
-MeshEx.h
-/home/seeeagull/retiler/src/MeshEx.h
-list
--
-
 /home/seeeagull/retiler/src/MeshEx_retriangulate.cpp
 MeshEx.h
 /home/seeeagull/retiler/src/MeshEx.h
@@ -120,10 +114,6 @@ MeshEx.h
 stdarg.h
 -
 
-/home/seeeagull/retiler/src/StringManip.cpp
-StringManip.h
-/home/seeeagull/retiler/src/StringManip.h
-
 /home/seeeagull/retiler/src/StringManip.h
 string
 -
@@ -141,12 +131,6 @@ MeshEx.h
 /home/seeeagull/retiler/src/MeshEx.h
 RetileSurface.h
 /home/seeeagull/retiler/src/RetileSurface.h
-
-/home/seeeagull/retiler/src/math/BoundingBox3.h
-Vec3.h
-/home/seeeagull/retiler/src/math/Vec3.h
-limits
--
 
 /home/seeeagull/retiler/src/math/Color.cpp
 Color.h
@@ -171,10 +155,6 @@ Vec3.h
 /home/seeeagull/retiler/src/math/Vec3.h
 Vec3Algo.h
 /home/seeeagull/retiler/src/math/Vec3Algo.h
-Matrix22.h
-/home/seeeagull/retiler/src/math/Matrix22.h
-Matrix22Algo.h
-/home/seeeagull/retiler/src/math/Matrix22Algo.h
 Matrix33.h
 /home/seeeagull/retiler/src/math/Matrix33.h
 Matrix33Algo.h
@@ -185,22 +165,12 @@ Matrix44Algo.h
 /home/seeeagull/retiler/src/math/Matrix44Algo.h
 Color.h
 /home/seeeagull/retiler/src/math/Color.h
-BoundingBox3.h
-/home/seeeagull/retiler/src/math/BoundingBox3.h
 RNG.h
 /home/seeeagull/retiler/src/math/RNG.h
 Noise.h
 /home/seeeagull/retiler/src/math/Noise.h
 PerlinNoise.h
 /home/seeeagull/retiler/src/math/PerlinNoise.h
-
-/home/seeeagull/retiler/src/math/Matrix22.h
-
-/home/seeeagull/retiler/src/math/Matrix22Algo.h
-Matrix22.h
-/home/seeeagull/retiler/src/math/Matrix22.h
-Vec2.h
-/home/seeeagull/retiler/src/math/Vec2.h
 
 /home/seeeagull/retiler/src/math/Matrix33.h
 Vec3.h
@@ -222,19 +192,7 @@ Vec3Algo.h
 cassert
 -
 
-/home/seeeagull/retiler/src/math/Noise.cpp
-Noise.h
 /home/seeeagull/retiler/src/math/Noise.h
-
-/home/seeeagull/retiler/src/math/Noise.h
-
-/home/seeeagull/retiler/src/math/PerlinNoise.cpp
-PerlinNoise.h
-/home/seeeagull/retiler/src/math/PerlinNoise.h
-stdlib.h
--
-math.h
--
 
 /home/seeeagull/retiler/src/math/PerlinNoise.h
 

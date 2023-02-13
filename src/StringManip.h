@@ -26,17 +26,6 @@ namespace dk
 		/// split string through some tokens
 		void splitString( const std::string s, std::vector<std::string> & v, const std::string delim = " ", const bool trim_spaces = true);
 
-
-		// ------------------- FileName / Path Manipulation routines ------------------
-
-		std::string setExtension( const std::string &fileName, const std::string &extension ); ///< Returns the given filename with another extension.
-		std::string                               getExtension( const std::string &fileName ); ///< Returns the extension (including period) of the given path
-
-
-		// -------------------- Character set conversions -----------------------------
-		std::wstring                                          toWString(const std::string& s); ///< converts the given multibyte character string to unicode
-		std::string                                           toString(const std::wstring& s); ///< converts the given widecharacter/unicode character string to multibyte version
-
 	} // namespace util
 } // namespace dk
 

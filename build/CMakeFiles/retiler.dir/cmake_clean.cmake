@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/retiler.dir/src/Mesh.cpp.o"
   "CMakeFiles/retiler.dir/src/MeshEx.cpp.o"
-  "CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o"
   "CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o"
   "CMakeFiles/retiler.dir/src/ObjIO.cpp.o"
   "CMakeFiles/retiler.dir/src/RetileSurface.cpp.o"

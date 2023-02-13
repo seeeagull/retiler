@@ -158,37 +158,6 @@ namespace math
 	}
 
 
-	// returns index of the component with the smallest value
-	template<typename T>
-	int nondominantAxis( const math::Vec3<T> &v )
-	{
-		if( abs(v.x) <= abs(v.y) )
-		{
-			if( abs(v.z) <= abs(v.x) )
-				return 2;
-			else
-				return 0;
-		}else
-		{
-			if( abs(v.z) <= abs(v.y) )
-				return 2;
-			else
-				return 1;
-		}
-	}
-
-	template<typename T>
-	Vec3<T> baseVec3( int i )
-	{
-		switch(i)
-		{
-		case 0:return Vec3<T>((T)(1.0), (T)(0.0), (T)(0.0));
-		case 1:return Vec3<T>((T)(0.0), (T)(1.0), (T)(0.0));
-		default:
-		case 2:return Vec3<T>((T)(0.0), (T)(0.0), (T)(1.0));
-		};
-	}
-
 	template<typename T>
 	inline T length( Vec3<T> &v )
 	{

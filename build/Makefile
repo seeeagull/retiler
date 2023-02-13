@@ -177,33 +177,6 @@ src/MeshEx.cpp.s:
 	$(MAKE) -f CMakeFiles/retiler.dir/build.make CMakeFiles/retiler.dir/src/MeshEx.cpp.s
 .PHONY : src/MeshEx.cpp.s
 
-src/MeshEx_intersections.o: src/MeshEx_intersections.cpp.o
-
-.PHONY : src/MeshEx_intersections.o
-
-# target to build an object file
-src/MeshEx_intersections.cpp.o:
-	$(MAKE) -f CMakeFiles/retiler.dir/build.make CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o
-.PHONY : src/MeshEx_intersections.cpp.o
-
-src/MeshEx_intersections.i: src/MeshEx_intersections.cpp.i
-
-.PHONY : src/MeshEx_intersections.i
-
-# target to preprocess a source file
-src/MeshEx_intersections.cpp.i:
-	$(MAKE) -f CMakeFiles/retiler.dir/build.make CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.i
-.PHONY : src/MeshEx_intersections.cpp.i
-
-src/MeshEx_intersections.s: src/MeshEx_intersections.cpp.s
-
-.PHONY : src/MeshEx_intersections.s
-
-# target to generate assembly for a file
-src/MeshEx_intersections.cpp.s:
-	$(MAKE) -f CMakeFiles/retiler.dir/build.make CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.s
-.PHONY : src/MeshEx_intersections.cpp.s
-
 src/MeshEx_retriangulate.o: src/MeshEx_retriangulate.cpp.o
 
 .PHONY : src/MeshEx_retriangulate.o
@@ -462,9 +435,6 @@ help:
 	@echo "... src/MeshEx.o"
 	@echo "... src/MeshEx.i"
 	@echo "... src/MeshEx.s"
-	@echo "... src/MeshEx_intersections.o"
-	@echo "... src/MeshEx_intersections.i"
-	@echo "... src/MeshEx_intersections.s"
 	@echo "... src/MeshEx_retriangulate.o"
 	@echo "... src/MeshEx_retriangulate.i"
 	@echo "... src/MeshEx_retriangulate.s"

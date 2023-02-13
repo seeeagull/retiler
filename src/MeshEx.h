@@ -149,8 +149,6 @@ public:
 	bool                                      removeVertexAndReTriangulateNeighbourhood( Vertex *v ); ///< removes the given vertex and retriangulate the hole which would be made
 	void           createTrianglesFromEdges( std::vector<Edge *> &edges, const math::Vec3d &normal ); ///< this method takes a list of already created edges and creates triangles for filling triangulated areas
 
-	bool findClosestIntersection( const math::Vec3d &position, const math::Vec3d &p1, const math::Vec3d &p2, math::Vec3d &intersection, math::Vec3d &normal, Triangle *&t );
-
 	void retriangulateHole( std::vector<MeshEx::Edge *> &boundaryEdges, std::map<MeshEx::Vertex *, math::Vec2d> &boundaryVertexProjections, std::vector<std::pair<math::Vec3d, math::Vec2d> > &interiorPoints );
 	void                                                                        detectAndFillHoles();
 

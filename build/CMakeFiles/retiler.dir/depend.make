@@ -3,11 +3,8 @@
 
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/Mesh.cpp
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/Mesh.h
-CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Matrix44.h
@@ -23,11 +20,8 @@ CMakeFiles/retiler.dir/src/Mesh.cpp.o: ../src/math/Vec3Algo.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/Mesh.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/MeshEx.cpp
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/MeshEx.h
-CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Matrix44.h
@@ -40,34 +34,11 @@ CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Vec2Algo.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Vec3.h
 CMakeFiles/retiler.dir/src/MeshEx.cpp.o: ../src/math/Vec3Algo.h
 
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/Mesh.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/MeshEx.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/MeshEx_intersections.cpp
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/BoundingBox3.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Color.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix22Algo.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix33.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix33Algo.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix44.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Matrix44Algo.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Noise.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/PerlinNoise.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/RNG.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Vec2.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Vec2Algo.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Vec3.h
-CMakeFiles/retiler.dir/src/MeshEx_intersections.cpp.o: ../src/math/Vec3Algo.h
-
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/Mesh.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/MeshEx.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/MeshEx_retriangulate.cpp
-CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/MeshEx_retriangulate.cpp.o: ../src/math/Matrix44.h
@@ -84,11 +55,8 @@ CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/Mesh.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/ObjIO.cpp
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/ObjIO.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/StringManip.h
-CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/ObjIO.cpp.o: ../src/math/Matrix44.h
@@ -105,11 +73,8 @@ CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/Mesh.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/MeshEx.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/RetileSurface.cpp
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/RetileSurface.h
-CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/RetileSurface.cpp.o: ../src/math/Matrix44.h
@@ -131,11 +96,8 @@ CMakeFiles/retiler.dir/src/main.cpp.o: ../src/ObjIO.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/RetileSurface.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/StringManip.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/main.cpp
-CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Matrix44.h
@@ -148,12 +110,9 @@ CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Vec2Algo.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Vec3.h
 CMakeFiles/retiler.dir/src/main.cpp.o: ../src/math/Vec3Algo.h
 
-CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Color.cpp
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Matrix44.h
@@ -166,12 +125,9 @@ CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Vec2Algo.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Vec3.h
 CMakeFiles/retiler.dir/src/math/Color.cpp.o: ../src/math/Vec3Algo.h
 
-CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/BoundingBox3.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Color.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Math.cpp
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Math.h
-CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Matrix22.h
-CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Matrix22Algo.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Matrix33.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Matrix33Algo.h
 CMakeFiles/retiler.dir/src/math/Math.cpp.o: ../src/math/Matrix44.h
